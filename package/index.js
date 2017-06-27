@@ -8,6 +8,15 @@ import {
 import Pop from 'micro-popover'
 
 export default class Popover extends React.Component {
+  constructor (props) {
+    super(props)
+
+    this.actions = {
+      pin: this.pin.bind(this),
+      unpin: this.unpin.bind(this)
+    }
+  }
+
   componentDidMount () {
     const {
       render: Render,
@@ -17,7 +26,7 @@ export default class Popover extends React.Component {
 
     this.mount = document.createElement('div')
 
-    renderToPortal(this, <Render />, this.mount)
+    renderToPortal(this, <Render {...this.actions} />, this.mount)
 
     this.popover = new Pop({
       target: findDOMNode(this),
@@ -40,9 +49,6 @@ export default class Popover extends React.Component {
   }
 
   render () {
-    return this.props.children({
-      pin: this.pin.bind(this),
-      unpin: this.unpin.bind(this)
-    })
+    return this.props.children(this.actions)
   }
 }
