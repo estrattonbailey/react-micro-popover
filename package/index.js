@@ -40,8 +40,8 @@ export default class Popover extends React.Component {
     this.popover.pin()
   }
 
-  unpin () {
-    this.popover.unpin()
+  unpin (force) {
+    this.popover.unpin(force)
   }
 
   componentWillUnmount () {
