@@ -43,9 +43,9 @@ const App = props => (
   <Provider>
     <div className="outer flex flex-items-center flex-justify-center">
 
-      <Popover render={MyPopover}>
+      <Popover render={MyPopover} transitionSpeed={200}>
         {props => {
-          return <button className="button" onClick={e => props.pin()}>I have a popover</button>
+          return <button className="button" onClick={e => props.toggle()}>I have a popover</button>
         }}
       </Popover>
 

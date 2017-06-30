@@ -13,7 +13,8 @@ export default class Popover extends React.Component {
 
     this.actions = {
       pin: this.pin.bind(this),
-      unpin: this.unpin.bind(this)
+      unpin: this.unpin.bind(this),
+      toggle: this.toggle.bind(this)
     }
   }
 
@@ -36,16 +37,20 @@ export default class Popover extends React.Component {
     })
   }
 
+  componentWillUnmount () {
+    unmountComponentAtNode(this.mount)
+  }
+
+  toggle () {
+    this.popover.toggle()
+  }
+
   pin () {
     this.popover.pin()
   }
 
   unpin (force) {
     this.popover.unpin(force)
-  }
-
-  componentWillUnmount () {
-    unmountComponentAtNode(this.mount)
   }
 
   render () {
