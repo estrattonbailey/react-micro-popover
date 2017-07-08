@@ -4,7 +4,7 @@ React component for [micro-popover](https://github.com/estrattonbailey/micro-pop
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](http://standardjs.com)
 
 ## Usage
-```
+```javascript
 import Popover from 'react-micro-popover'
 
 const MyPopover = props => (
