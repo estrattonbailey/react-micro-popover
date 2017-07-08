@@ -8,7 +8,7 @@ React component for [micro-popover](https://github.com/estrattonbailey/micro-pop
 import Popover from 'react-micro-popover'
 
 const MyPopover = props => (
-  <h5>I'm in a popover!</h5>
+  <h5>This is a popover!</h5>
 )
 
 const App = props => (
