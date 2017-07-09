@@ -1,5 +1,5 @@
 # react-micro-popover
-React component for [micro-popover](https://github.com/estrattonbailey/micro-popover). [Demo](http://estrattonbailey.com/react-micro-popover/) 🍻
+A tiny, fast, configurable popover, built with [micro-popover](https://github.com/estrattonbailey/micro-popover). [Demo](http://estrattonbailey.com/react-micro-popover/) 🍻
 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](http://standardjs.com)
 
