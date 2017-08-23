@@ -42,6 +42,19 @@ export default class Popover extends React.Component {
     })
   }
 
+  componentWillReceiveProps (props) {
+    const {
+      render: Render,
+      position = 'bottom', // eslint-disable-line no-unused-vars
+      transitionSpeed = 0, // eslint-disable-line no-unused-vars
+      ...rest
+    } = props
+
+    unmountComponentAtNode(this.mount)
+
+    renderToPortal(this, <Render {...this.actions} {...rest} />, this.mount)
+  }
+
   componentWillUnmount () {
     unmountComponentAtNode(this.mount)
   }
