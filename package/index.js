@@ -25,12 +25,13 @@ export default class Popover extends React.Component {
     const {
       render: Render,
       position = 'bottom',
-      transitionSpeed = 0
+      transitionSpeed = 0,
+      ...rest
     } = this.props
 
     this.mount = document.createElement('div')
 
-    renderToPortal(this, <Render {...this.actions} />, this.mount)
+    renderToPortal(this, <Render {...this.actions} {...rest} />, this.mount)
 
     this.popover = new Pop({
       target: findDOMNode(this),
